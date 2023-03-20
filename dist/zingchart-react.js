@@ -84,6 +84,8 @@ var EVENT_NAMES = [
   'feed_start',
   'zoom',
   'postzoom',
+  'zingchart.plugins.dragging.update',
+  'zingchart.plugins.dragging.complete',
   'heatmap.mousemove',
   'zingchart.plugins.selection-tool.mouseup',
   'zingchart.plugins.selection-tool.selection',
@@ -367,7 +369,7 @@ var ZingChart = function (_Component) {
     var _this = possibleConstructorReturn(this, (ZingChart.__proto__ || Object.getPrototypeOf(ZingChart)).call(this, props));
 
     _this.id = _this.props.id || 'zingchart-react-' + window.ZCReact.count++;
-    console.log(props);
+
     // Bind all methods available to zingchart to be accessed via Refs.
     METHOD_NAMES$1.forEach(function (name) {
       _this[name] = function (args) {
